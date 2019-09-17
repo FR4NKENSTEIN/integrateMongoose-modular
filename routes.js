@@ -5,4 +5,4 @@ module.exports = function(app){
     app.post('/users', controller.create)
     app.get('/success', controller.success)
 }
-// Export anything in this .exports function to another file "requiring" this file
+// Export anything in this .exports function to another file "requiring" this routes file

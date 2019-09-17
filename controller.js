@@ -17,8 +17,8 @@ module.exports = {
     },
     success: function(req,res){
         User.find()
-            .then(data => res.render('success', {user: data}))//I made a lot of user's data is currently an array
-            .catch(err => res.json(err));
+            .then(data => res.render('success', {user: data}))// on a successful "find" then do the following...
+            .catch(err => res.json(err));// otherwise catch with...
     },
 }
-// Export anything in this .exports object to another file "requiring" this file
+// Export anything in this .exports object to another file "requiring" this controller file

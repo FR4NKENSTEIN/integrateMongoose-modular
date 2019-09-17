@@ -16,4 +16,4 @@ const User = mongoose.model('User', UserSchema);
 // for those Documents.
 
 module.exports = User;
-// Export anything in this .exports object to another file "requiring" this file
+// Export anything in this .exports object to another file "requiring" this model file

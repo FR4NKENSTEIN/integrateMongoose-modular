@@ -1,16 +1,18 @@
-
 // CONFIGURATION
+    //IMPORTS
 const express = require("express");
-const bp = require("body-parser");
-const app = express();
+const app = express();// "app" is just standard naming convention
 
-app.set('views', __dirname+'/views');
+    // .set defines setting for the server
 app.set('view engine', 'ejs');
+app.set('views', __dirname+'/views');
 
+    // .use mounts middleware
 app.use(express.urlencoded({extended:true}));
 
 // ROUTES
-require('./routes')(app);// access routes
+require('./routes')(app);// access routes && send const "app" backwards
+                        // through the chain of requirements
 
 // PORT
 app.listen(8000, (err)=>{
